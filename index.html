@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="appointment-app">
+        <header>
+            <h1>Doctor Appointment Booking </h1>
+        </header>
+
+        <section class="select-doctor">
+            <h2>Select a Doctor</h2>
+            <select id="doctorSelect">
+                <option value="" disabled selected>Select Doctor</option>
+                <option value="1">Dr. Dhaval Dave (Cardiologist)</option>
+                <option value="2">Dr. Meet Patel (Dermatologist)</option>
+                <option value="3">Dr. Rajesh Panot (Pediatrician)</option>
+                <option value="4">Dr. Sudhir Jadhav (General surgeon)</option>
+                <option value="5">Dr. Prashant Dave (Pediatrician)</option>
+            </select>
+        </section>
+
+        <section class="select-slot">
+            <h2>Select a Time Slot</h2>
+            <select id="slotSelect">
+                <option value="" disabled selected>Select Time Slot</option>
+            </select>
+        </section>
+
+        <section class="patient-info">
+            <h2>Patient Information</h2>
+            <form id="appointmentForm">
+                <label for="patientName">Full Name:</label>
+                <input type="text" id="patientName" name="patientName" required>
+
+                <label for="patientEmail">Mobile Number:</label>
+                <input type="number" id="patientEmail" name="patientEmail" required>
+
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+        <section class="appointment-confirmation" id="confirmationSection" hidden>
+            <h2>Appointment Confirmed</h2>
+            <p id="confirmationMessage"></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
